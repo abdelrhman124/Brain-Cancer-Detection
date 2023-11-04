@@ -2,15 +2,20 @@ import cv2
 
 
 image = cv2.imread("blur3.jpg")
-image2 = cv2.imread("Y2.jpg")
+
+
+# resize the image
 print("width: {} pixels".format(image.shape[1]))
 print("height: {} pixels".format(image.shape[0]))
 print("channels: {}".format(image.shape[2]))
 dim=(500,590)
 image=cv2.resize(image, dim)
-image2=cv2.resize(image2, dim)
+
 cv2.imshow("image", image)
-cv2.imshow("image2", image2)
+
+
+# threshold the image
+
 gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY, 0.7)
 cv2.imshow("gray",gray)
 
